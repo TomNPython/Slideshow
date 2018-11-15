@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  font-size: 2em;
+}
+
+.grid-container {
+  display: grid;
+  grid-template columns: 1fr 4fr 1fr;
+  vertical-align: middle;
+  height: 100vh;
+}
+
+body {
+  background: MidnightBlue;
+  font-family: Helvetica, sans-serif;
+}
+
+.main {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  color: white;
+}
+
+.language {
+  display: inline-grid;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  height: 100vh;
+}
+
+.prev, .next {
+  display: inline-grid;
+  cursor: pointer;
+  position: absolute;
+  align-items: center;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  transition: 0.5s ease;
+  margin: 0px 0px 50px 0px;
+}
+
+h1 {
+  font-size: 1em !important;
+}
+
+.next {
+  right: 0;
+}
+
+.slide {
+  -webkit-animation-name: slide;
+  -webkit-animation-duration: 1s;
+  animation-name: slide;
+  animation-duration: 1s;
+}
+
+@webkit-keyframes slide {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
+@keyframes slide {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
